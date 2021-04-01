@@ -1,0 +1,43 @@
+/* 320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV */
+
+@media only screen and (max-width: 1024px){
+    .work-content-container{
+        margin: 0 15%;
+    }
+}
+@media only screen and (max-width: 768px){
+    h1{ 
+        font-size: 5rem;
+    }
+
+    .work-content-container{
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 480px){
+    h1{
+        font-size: 4rem;
+        line-height: 100%;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+
+    .work-content-container{
+        margin: 0;
+    }
+    .content-end-flex{
+        margin-top: 40px;
+        flex-direction: column;
+    }
+    .footer-item-title{
+        margin-top: 40px;
+    }
+    .footer-text, .contact-icons{
+        max-width: 50%;
+    }
+}
