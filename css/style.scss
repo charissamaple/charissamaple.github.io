@@ -15,8 +15,8 @@ $lunchtypeMedium: lunchtype22medium, Helvetica, sans-serif;
 $karlaRegular: karla-regular, Helvetica, sans-serif;
 $karlaBold: karla-bold, Helvetica, sans-serif;
 
-$boxOneWidth: 38%;
-$boxTwoWidth: 58%; 
+$boxOneWidth: 36%;
+$boxTwoWidth: 60%; 
 
 $black-border: $black solid 1px;
 $quirky-border: $quirky solid 1px;
@@ -57,8 +57,8 @@ html, body{
     background-color: $offWhite;
     position: relative;
 
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 h1, h2, h3, h4, h5, h6, a, p, ul, ol, th, th{
     @include removeSpace();
@@ -82,13 +82,14 @@ h1{
 }
 h2{
     font-family: $karlaBold;
-    font-size: 2.7rem;
+    font-size: 2.8rem;
+    letter-spacing: -.02em;
 }
 h3{
     font-family: $karlaRegular;
     font-size: 2.1rem;
     letter-spacing: -.01em;  
-    line-height: 130%; 
+    line-height: 140%; 
 }
 h4{  
     font-family: $lunchtypeMedium;
@@ -117,6 +118,13 @@ h6{
     border-color: $lightgray;
 }
 
+::-moz-selection { /* Code for Firefox */
+    background: $quirky;
+}
+::selection {
+    background: $quirky;
+}
+
 div{
     // border: black solid 1px;
 }
@@ -132,7 +140,6 @@ a{
         border-bottom: $black-border;
         &.logo{
             border: none;
-
         }
     }
     &:hover{
@@ -144,6 +151,9 @@ a{
     @extend p;
     padding: 0 !important;
     margin: 0 !important
+}
+.about-link{
+    @extend h3;
 }
 
 .button-div{
@@ -222,7 +232,8 @@ a{
 /* -------------------------------------------------------------- NAV */
 
 .logo > img{
-    max-width: 30px;
+    max-height: 30px;
+    padding-right: 10px;
 }
 .name-tag{
     @extend h2;
@@ -255,10 +266,11 @@ a{
 }
 
 .home-h2{
-    font-family: lunchtype22light, Helvetica, sans-serif;
+    // font-family: lunchtype22light, Helvetica, sans-serif;
+    font-family: $karlaRegular, Helvetica, sans-serif;
     font-size: 3.2em;
-    letter-spacing: .02em;
-    line-height: 1.3em;  
+    letter-spacing: -.02em;
+    line-height: 1.4em;  
 
     .inline-link{
         font-size: inherit;
@@ -266,24 +278,23 @@ a{
     }
 }
 
-// #selected-work{
-//     padding-left: 10px;
-// }
-
 .work-button-link{
     @include flex(row, nowrap);
 
     background-color: $offWhite;
     width: 100%;
     align-items: center;
-    border-bottom: $lightgray 1px solid;
-    border-top: $offWhite 1px solid;
+
+    border: $black solid 1px;
+    padding: 15px;
+    margin: 15px 0 0 0;
+    // border-bottom: $lightgray 1px solid;
+    // border-top: $offWhite 1px solid;
 
     transition: .1s ease-in-out;
-    padding: 0 10px;
 
     h3{
-        padding: 20px 0;
+        font-size: 1.7em;
     }
 
     &:hover{
@@ -315,8 +326,8 @@ a{
     .tag-box{
         display: inline-block;
         vertical-align: middle;
-        width: 10px;
-        height: 10px;
+        width: 5px;
+        height: 5px;
     }
     .UX{
         background-color: $fresh;
@@ -330,8 +341,8 @@ a{
 }
 
 .work{
-    border-top: $black-border;
-    border-color: $lightgray;
+    // border-top: $black-border;
+    // border-color: $lightgray;
     margin-top: 15px;
 }
 
@@ -346,7 +357,7 @@ a{
 /* -------------------------------------------------------------- PROJECT */
 
 .project-intro{
-    padding-top: 60px;
+    padding-top: 30px;
     
     h1{
         padding-bottom: 30px;
@@ -369,14 +380,19 @@ a{
         padding-top: $content-space;
         padding-bottom: 0;
     }
-    h3, p{
-        padding-top: 15px;
+    p{
+        margin-top: 15px;
     }
     a{
         margin-top: 30px;
     }
     .in-text-h3{
         padding: 0 25px 0 0;
+
+        &.number{
+            font-family: $karlaBold;
+            color: $fresh;
+        }
     }
     .in-text-h3-flex{
         display: flex;
@@ -387,6 +403,22 @@ a{
     }
 }
 
+.bar{
+    margin: 20px 0;
+    display: flex;
+
+    div{
+        min-width: 5px;
+        margin: 5px 20px 5px 0;
+
+        &.ux{
+            background-color: $fresh;
+        }
+        &.visual{
+            background-color: $energetic;
+        }
+    }
+}
 
 .section-divider{
     display: flex;
@@ -442,6 +474,14 @@ a{
         width: 100%;
     }
 }
+.caption{
+    font-family: $lunchtypeRegular;
+    line-height: 140%;
+    font-size: 1.2rem;
+    color: $darkgray;
+    margin: 10px 0 !important;
+    padding: 0;
+}
 table{
     width: 100%;
     border-collapse: collapse;
@@ -488,6 +528,7 @@ video{
 }
 
 
+
 /* -------------------------------------------------------------- FOOTER */
 
 .content-end{
@@ -527,6 +568,8 @@ footer{
 }
 
 .footer-home{
+    text-align: right;
+
     position: absolute;
     bottom: 3%;
     right: 5%;

@@ -11,11 +11,8 @@ document.getElementById("strvnger").onmouseout = function () { mouseOut(); };
 document.getElementById("tasty").onmouseover = function () { bgTasty(); };
 document.getElementById("tasty").onmouseout = function () { mouseOut(); };
 
-document.getElementById("peak").onmouseover = function () { bgPeak(); };
-document.getElementById("peak").onmouseout = function () { mouseOut(); };
-
-document.getElementById("tidbits").onmouseover = function () { bgTidbits(); };
-document.getElementById("tidbits").onmouseout = function () { mouseOut(); };
+document.getElementById("esports").onmouseover = function () { bgEsports(); };
+document.getElementById("esports").onmouseout = function () { mouseOut(); };
 
 
 function bgZone() {
@@ -34,11 +31,7 @@ function bgTasty() {
   document.getElementById("preview-image").style.backgroundImage =
     "url(images/IMG_5876.JPG)";
 }
-function bgPeak() {
-  document.getElementById("preview-image").style.backgroundImage =
-    "url(images/IMG_8382.JPG)";
-}
-function bgTidbits() {
+function bgEsports() {
   document.getElementById("preview-image").style.backgroundImage =
     "url(images/IMG_5876.JPG)";
 }

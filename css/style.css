@@ -13,9 +13,11 @@ html, body {
   font-family: karla-regular, Helvetica, sans-serif;
   background-color: #fafafa;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, .name-tag, h3, h4, h5, .footer-text p, .footer-text .in-text-link, .footer-text th, .footer-text td, h6, a, p, .in-text-link, th, td, ul, ol, th, th {
+h1, h2, .name-tag, h3, .about-link, h4, h5, .footer-text p, .footer-text .in-text-link, .footer-text th, .footer-text td, h6, a, p, .in-text-link, th, td, ul, ol, th, th {
   margin: 0;
   padding: 0;
   color: #000;
@@ -38,14 +40,15 @@ h1 {
 
 h2, .name-tag {
   font-family: karla-bold, Helvetica, sans-serif;
-  font-size: 2.7rem;
+  font-size: 2.8rem;
+  letter-spacing: -.02em;
 }
 
-h3 {
+h3, .about-link {
   font-family: karla-regular, Helvetica, sans-serif;
   font-size: 2.1rem;
   letter-spacing: -.01em;
-  line-height: 130%;
+  line-height: 140%;
 }
 
 h4 {
@@ -75,6 +78,15 @@ h6 {
 
 .gray {
   border-color: #e4e4e4;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: #FF9CE3;
+}
+
+::selection {
+  background: #FF9CE3;
 }
 
 /* -------------------------------------------------------------- BUTTONs */
@@ -201,11 +213,11 @@ a:hover {
 }
 
 .box-one {
-  width: 38%;
+  width: 36%;
 }
 
 .box-two {
-  width: 58%;
+  width: 60%;
 }
 
 .box-three {
@@ -214,7 +226,8 @@ a:hover {
 
 /* -------------------------------------------------------------- NAV */
 .logo > img {
-  max-width: 30px;
+  max-height: 30px;
+  padding-right: 10px;
 }
 
 .name-tag {
@@ -273,10 +286,10 @@ a:hover {
 }
 
 .home-h2 {
-  font-family: lunchtype22light, Helvetica, sans-serif;
+  font-family: karla-regular, Helvetica, sans-serif, Helvetica, sans-serif;
   font-size: 3.2em;
-  letter-spacing: .02em;
-  line-height: 1.3em;
+  letter-spacing: -.02em;
+  line-height: 1.4em;
 }
 
 .home-h2 .inline-link {
@@ -302,15 +315,15 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: #e4e4e4 1px solid;
-  border-top: #fafafa 1px solid;
+  border: #000 solid 1px;
+  padding: 15px;
+  margin: 15px 0 0 0;
   -webkit-transition: .1s ease-in-out;
   transition: .1s ease-in-out;
-  padding: 0 10px;
 }
 
-.work-button-link h3 {
-  padding: 20px 0;
+.work-button-link h3, .work-button-link .about-link {
+  font-size: 1.7em;
 }
 
 .work-button-link:hover {
@@ -348,8 +361,8 @@ a:hover {
 .tag .tag-box {
   display: inline-block;
   vertical-align: middle;
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
 }
 
 .tag .UX {
@@ -365,8 +378,6 @@ a:hover {
 }
 
 .work {
-  border-top: #000 solid 1px;
-  border-color: #e4e4e4;
   margin-top: 15px;
 }
 
@@ -381,14 +392,14 @@ a:hover {
 
 /* -------------------------------------------------------------- PROJECT */
 .project-intro {
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 .project-intro h1 {
   padding-bottom: 30px;
 }
 
-.project-intro h3 {
+.project-intro h3, .project-intro .about-link {
   margin-bottom: 60px;
   max-width: 800px;
 }
@@ -409,8 +420,8 @@ a:hover {
   padding-bottom: 0;
 }
 
-.work-content-container h3, .work-content-container p, .work-content-container .in-text-link, .work-content-container th, .work-content-container td {
-  padding-top: 15px;
+.work-content-container p, .work-content-container .in-text-link, .work-content-container th, .work-content-container td {
+  margin-top: 15px;
 }
 
 .work-content-container a {
@@ -421,6 +432,11 @@ a:hover {
   padding: 0 25px 0 0;
 }
 
+.work-content-container .in-text-h3.number {
+  font-family: karla-bold, Helvetica, sans-serif;
+  color: #11B077;
+}
+
 .work-content-container .in-text-h3-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -429,6 +445,26 @@ a:hover {
 
 .work-content-container .in-text-h3-flex .in-text-h3 {
   padding-top: 20px;
+}
+
+.bar {
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bar div {
+  min-width: 5px;
+  margin: 5px 20px 5px 0;
+}
+
+.bar div.ux {
+  background-color: #11B077;
+}
+
+.bar div.visual {
+  background-color: #F26722;
 }
 
 .section-divider {
@@ -495,6 +531,15 @@ a:hover {
 
 .image-div img {
   width: 100%;
+}
+
+.caption {
+  font-family: lunchtype22regular, Helvetica, sans-serif;
+  line-height: 140%;
+  font-size: 1.2rem;
+  color: #8d8d8d;
+  margin: 10px 0 !important;
+  padding: 0;
 }
 
 table {
@@ -597,6 +642,7 @@ footer {
 }
 
 .footer-home {
+  text-align: right;
   position: absolute;
   bottom: 3%;
   right: 5%;
