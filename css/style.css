@@ -394,6 +394,10 @@ a:hover {
   background-size: cover;
 }
 
+#selected-work {
+  padding-top: 80px;
+}
+
 /* -------------------------------------------------------------- PROJECT */
 .project-intro {
   padding-top: 30px;
