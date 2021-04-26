@@ -114,6 +114,10 @@ a:hover {
   margin: 0 !important;
 }
 
+.about-content {
+  min-height: 55vh;
+}
+
 .button-div {
   font-family: karla-regular, Helvetica, sans-serif;
   border: #000 solid 1px;
@@ -406,7 +410,7 @@ a:hover {
 
 .project-cover {
   width: 100%;
-  max-height: 70vh;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -531,6 +535,10 @@ a:hover {
 
 .image-div img {
   width: 100%;
+}
+
+.image-div.about {
+  padding-top: 0 !important;
 }
 
 .caption {

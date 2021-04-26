@@ -17,11 +17,11 @@ document.getElementById("esports").onmouseout = function () { mouseOut(); };
 
 function bgZone() {
   document.getElementById("preview-image").style.backgroundImage = 
-    "url(images/IMG_5876.JPG)";
+    "url(images/home/zone-cover.png)";
 }
 function bgVerdant() {
   document.getElementById("preview-image").style.backgroundImage = 
-    "url(images/IMG_5876.JPG)";
+    "url(images/home/verdant-cover.png)";
 }
 function bgStrvnger() {
   document.getElementById("preview-image").style.backgroundImage =
@@ -29,7 +29,7 @@ function bgStrvnger() {
 }
 function bgTasty() {
   document.getElementById("preview-image").style.backgroundImage =
-    "url(images/IMG_5876.JPG)";
+    "url(images/home/tasty-cover.png)";
 }
 function bgEsports() {
   document.getElementById("preview-image").style.backgroundImage =

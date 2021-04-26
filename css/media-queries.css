@@ -41,6 +41,9 @@
         font-size: 2.5rem;
     }
 
+    .nav-block{
+        padding-top: 10px;
+    }
     .work-content-container{
         margin: 0;
     }
