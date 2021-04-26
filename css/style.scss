@@ -157,7 +157,12 @@ a{
     @extend h3;
 }
 .about-content{
+    max-width: 750px;
     min-height: 55vh;
+
+    h3{
+        margin-bottom: 20px;
+    }
 }
 
 .button-div{
@@ -206,7 +211,7 @@ a{
 /* -------------------------------------------------------------- CONTAINERS */
 
 .page-container{
-    padding: 3% 5% 2% 5%;
+    padding: 3% 5% 3% 5%;
 }
 .content-container{
     @include flex(column, nowrap);
@@ -356,11 +361,12 @@ a{
 
     background-image: url('');
     @include backgroundImage();
+    background-size: contain;
 }
 
-#selected-work{
-    padding-top: 80px;
-}
+// #selected-work{
+//     padding-top: 80px;
+// }
 
 /* -------------------------------------------------------------- PROJECT */
 
@@ -582,7 +588,7 @@ footer{
     text-align: right;
 
     position: absolute;
-    bottom: 3%;
+    bottom: 5%;
     right: 5%;
 
     margin: 0;

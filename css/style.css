@@ -115,7 +115,12 @@ a:hover {
 }
 
 .about-content {
+  max-width: 750px;
   min-height: 55vh;
+}
+
+.about-content h3, .about-content .about-link {
+  margin-bottom: 20px;
 }
 
 .button-div {
@@ -176,7 +181,7 @@ a:hover {
 
 /* -------------------------------------------------------------- CONTAINERS */
 .page-container {
-  padding: 3% 5% 2% 5%;
+  padding: 3% 5% 3% 5%;
 }
 
 .content-container {
@@ -392,10 +397,7 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-#selected-work {
-  padding-top: 80px;
+  background-size: contain;
 }
 
 /* -------------------------------------------------------------- PROJECT */
@@ -656,7 +658,7 @@ footer {
 .footer-home {
   text-align: right;
   position: absolute;
-  bottom: 3%;
+  bottom: 5%;
   right: 5%;
   margin: 0;
   max-height: 50px;
