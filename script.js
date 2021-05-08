@@ -11,31 +11,29 @@ document.getElementById("strvnger").onmouseout = function () { mouseOut(); };
 document.getElementById("tasty").onmouseover = function () { bgTasty(); };
 document.getElementById("tasty").onmouseout = function () { mouseOut(); };
 
-document.getElementById("esports").onmouseover = function () { bgEsports(); };
-document.getElementById("esports").onmouseout = function () { mouseOut(); };
+// document.getElementById("esports").onmouseover = function () { bgEsports(); };
+// document.getElementById("esports").onmouseout = function () { mouseOut(); };
 
 
 function bgZone() {
-  document.getElementById("preview-image").style.backgroundImage = 
-    "url(images/home/zone-cover.png)";
+  document.getElementById("zone-bg").style.opacity = "1";
 }
 function bgVerdant() {
-  document.getElementById("preview-image").style.backgroundImage = 
-    "url(images/home/verdant-cover.png)";
+  document.getElementById("verdant-bg").style.opacity = "1";
 }
 function bgStrvnger() {
-  document.getElementById("preview-image").style.backgroundImage =
-    "url(images/home/strvnger-cover.png)";
+  document.getElementById("stranger-bg").style.opacity = "1";
 }
 function bgTasty() {
-  document.getElementById("preview-image").style.backgroundImage =
-    "url(images/home/tasty-cover.png)";
+  document.getElementById("tasty-bg").style.opacity = "1";
 }
-function bgEsports() {
-  document.getElementById("preview-image").style.backgroundImage =
-    "url(images/IMG_5876.JPG)";
-}
+// function bgEsports() {
+//   document.getElementById("zone-bg").style.display = "block";
+// }
 
 function mouseOut() {
-  document.getElementById("preview-image").style.backgroundImage = "";
+  document.getElementById("zone-bg").style.opacity = "0";
+  document.getElementById("verdant-bg").style.opacity = "0";
+  document.getElementById("stranger-bg").style.opacity = "0";
+  document.getElementById("tasty-bg").style.opacity = "0";
 }

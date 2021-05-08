@@ -279,7 +279,7 @@ a{
     font-family: $karlaRegular, Helvetica, sans-serif;
     font-size: 3.2em;
     letter-spacing: -.02em;
-    line-height: 1.4em;  
+    line-height: 1.5em;  
 
     .inline-link{
         font-size: inherit;
@@ -355,18 +355,39 @@ a{
     margin-top: 15px;
 }
 
-#preview-image{
+#preview-image-div{
+    position: relative;   
+}
+.preview-image{
     width: 100%;
     height: 100%;
-
-    background-image: url('');
+    position: absolute;
+}
+#zone-bg{
+    opacity: 0;
     @include backgroundImage();
     background-size: contain;
+    background-image: url("../images/home/zone-cover.png");
+}
+#verdant-bg{
+    opacity: 0;
+    @include backgroundImage();
+    background-size: contain;
+    background-image: url("../images/home/verdant-cover.png");
+}
+#stranger-bg{
+    opacity: 0;
+    @include backgroundImage();
+    background-size: contain;
+    background-image: url("../images/home/strvnger-cover.png");
+}
+#tasty-bg{
+    opacity: 0;
+    @include backgroundImage();
+    background-size: contain;
+    background-image: url("../images/home/tasty-cover.png");
 }
 
-// #selected-work{
-//     padding-top: 80px;
-// }
 
 /* -------------------------------------------------------------- PROJECT */
 
